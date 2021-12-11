@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: rgb(233, 213, 123);
+    font-family     : 'Mulish', sans-serif;
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    height          : 100vh;
+    overflow        : hidden;
+    margin          : 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.progress-container {
+    display        : flex;
+    justify-content: space-between;
+    position       : relative;
+    margin-bottom  : 30px;
+    max-width      : 100%;
+    width          : 350px;
+}
+
+
+.progress-container::before {
+    content         : "";
+    background-color: rgba(107, 64, 9, 0.89);
+    position        : absolute;
+    top             : 50%;
+    left            : 0;
+    transform       : translateY(-50%);
+    height          : 4px;
+    width           : 100%;
+    z-index         : -1;
+}
+
+
+.progress {
+    background-color: rgb(102, 11, 11);
+    position        : absolute;
+    top             : 50%;
+    left            : 0;
+    transform       : translateY(-50%);
+    height          : 4px;
+    width           : 0%;
+    z-index         : -1;
+    transition      : 0.4s ease;
+}
+
+.circle {
+    background-color: rgb(81, 211, 67);
+    color           : rgb(189, 69, 69);
+    border-radius   : 50%;
+    height          : 30px;
+    width           : 30px;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    border          : 3px solid #e0e0e0;
+    text-transform  : bold;
+    font-weight     : bold;
+    transition      : .4s ease;
+}
+
+.btn {
+    background-color: rgb(238, 28, 28);
+    color           : white;
+    border          : 0;
+    border-radius   : 6px;
+    cursor          : pointer;
+    font-family     : inherit;
+    padding         : 8px 25px;
+    margin          : 5px;
+    font-size       : 14px;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn:focus {
+    outline: 0;
+}
+
+.btn:disabled {
+    background-color: rgb(148, 148, 130);
+    cursor          : not-allowed;
+}
+
+.circle.active {
+    border-color: rgb(238, 79, 118);
+}
+
